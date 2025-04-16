@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #4761FF;
-    --secondary: #555555;
-    --light: #F1F3FA;
-    --dark: #1C2035;
+    --primary: #00868b;
+    --secondary: #4D5B5C;
+    --light: #E6F4F5;
+    --dark: #003638;
 }
 
 .back-to-top {
@@ -178,7 +178,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/2_cr.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../img/uk.jpg) center center no-repeat;
     background-size: cover;
 }
 
