@@ -113,3 +113,29 @@
     
 })(jQuery);
 
+// Contact Form Submission (Netlify Function)
+$('.contact-form').on('submit', function (e) {
+    e.preventDefault();
+
+    const $form = $(this);
+    const formData = {
+        name: $form.find('input[name="name"]').val(),
+        email: $form.find('input[name="email"]').val(),
+        mobile: $form.find('input[name="mobile"]').val(),
+        message: $form.find('textarea[name="message"]').val()
+    };
+
+    $.ajax({
+        url: '/.netlify/functions/contact',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(formData),
+        success: function () {
+            alert('Message sent successfully!');
+            $form[0].reset();
+        },
+        error: function () {
+            alert('There was an error sending your message.');
+        }
+    });
+});
